@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        code {
+            font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+                monospace;
+        }
+
+        body {
+            /* font-family: 'Poppins', sans-serif !important; */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #FFFFFF;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #FFFFFF;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #000000;
+        }
+
+        p {
+            color: #000000;
+        }
+
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #FFFFFF !important;
+            text-decoration: none;
+            border-radius: 10px;
+            background-color: #009136 !important;
+        }
+
+        .button-container {
+            margin: 10px 0;
+        }
+
+        /* Responsive styles */
+        @media only screen and (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <img src="" alt="">
+        </div>
+        <h2>Hello <%= user.firstName %>,</h2>
+        <p>Your email was verified!</p>
+        <p> To activate your account, Please click the link to set password:</p>
+        <div class="button-container">
+            <a href="<%= `${clientURI}/user/authentication/set-password/${isCreated._id}` %>">SET PASSWORD</a>
+        </div>
+    </div>
+</body>
+
+</html>
